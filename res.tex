@@ -1,0 +1,218 @@
+
+
+\end{document} shrink it and make it one page resume
+ChatGPT
+To fit your resume onto one page, we need to adjust the content and formatting. This includes shortening some descriptions, merging sections, and possibly reducing font size. Here is a revised version:
+
+latex
+Copy code
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+\input{glyphtounicode}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.25in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\normalsize
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{center}
+    \textbf{\Huge \scshape Nishant Kumar} \\ \vspace{8pt}
+    \small 
+    \faIcon{github}
+    \href{https://github.com/Nishant5454}{\underline{github.com/Nishant5454}} $  $
+    \faIcon{code}
+    \href{https://www.mattydoe.com}
+    {\underline{Nishant.com}} $  $
+    \faIcon{linkedin}
+    \href{https://www.linkedin.com/feed/}{\underline{linkedin.com/in/Nishant5454}} $  $
+    \faIcon{envelope}
+    \href{mailto:kumarnishant5454@gmail.com}
+    {\underline{kumarnishant5454@gmail.com}}
+\end{center}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Technocrats Institute Of Technology}{June 2025}
+      {B.Tech Computer Science}{Current GPA: 8.33/10}  
+      
+    \resumeSubheading
+      {S.R.S.D +2 High School}{March 2021}
+      {Maths, Physics, Chemistry}{Percentage: 83.8\%} 
+      
+    \resumeSubheading 
+      {S.R.S.D High School}{March 2019} 
+      {Maths, Physics, S.S.C}{Percentage: 86.6\%}
+
+    \vspace{-5pt}
+
+    \textbf{Courses:} Object-Oriented Programming, Data Structures \& Algorithms, DBMS, Computer Networks, Operating Systems
+
+  \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C/C++, JavaScript/EJS, HTML/CSS, \LaTeX} \\
+     \textbf{Tools}{: Git/GitHub, Unix Shell, Webpack, VS Code, Postman, Linux, Docker} \\
+     \textbf{Frameworks}{: React, Node.js, Express Js, Material-UI, RestAPI} \\
+     \textbf{Databases}{: MongoDB, SQL}
+    }}
+ \end{itemize}
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+        {\textbf{Plasma-Donation Web Application} $|$ \footnotesize\emph{ReactJs, ExpressJS, MongoDB, RestAPIs}}{Nov. 2023}
+        \resumeItemListStart
+            \resumeItem{SIH 2024, earned Honorable Mention}
+            \resumeItem{Developed a web app to gamify eco-friendliness using the INRIX API}
+            \resumeItem{Used RestAPI for backend and frontend communication}
+        \resumeItemListEnd
+    
+        \resumeProjectHeading
+        {\textbf{BLEAN} $|$ \footnotesize\emph{Flutter, Python ExpressJs, AWS Lambda, REST API}}{May 2024 -- Present}
+        \resumeItemListStart
+            \resumeItem{Full-stack Android app for gym management}
+            \resumeItem{Used Rest API's and JWT Access Tokens}
+            \resumeItem{Developed APIs and handled backend}
+        \resumeItemListEnd
+          
+        \resumeProjectHeading
+        {\textbf{Authentication} $|$ \footnotesize\emph{ExpressJS, Mongoose, API, Git, Postman}}{Dec. 2023}
+        \resumeItemListStart
+            \resumeItem{Backend server to authenticate users}
+            \resumeItem{Used JWT and Bcrypt for tokenization and hashing}
+            \resumeItem{Tested on Postman and deployed on GitHub}
+        \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+% -------------------- EXPERIENCE --------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+    {\textbf{Competitive Programming Club} $|$ \footnotesize\emph{Member}}{Sept. 2023 -- Present}
+    \resumeItemListStart
+        \resumeItem{Involved in Competitive Programming activities}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+    {\textbf{Charity Home} $|$ \footnotesize\emph{Volunteer}}{2018 -- Present}
+    \resumeItemListStart
+        \resumeItem{Award for philanthropic hours, donated food and 5000 rupees annually}
+    \resumeItemListEnd
+
+% -------------------- HOBBIES --------------------
+\section{Hobbies}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{Reading Books}}{2019 -- Present}
+        \resumeItemListStart
+            \resumeItem{Enjoy reading, particularly "Atomic Habits"}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{1st Place in 10th Board at Block Level}}{Feb. 2018}
+        \resumeItemListStart
+            \resumeItem{Won 10000 rupees in Block Level Olympiad competing against 5000 students}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd 
+
+\end{document}
